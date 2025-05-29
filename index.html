@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Jubilación - Nuevo Diseño</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="calculator-container">
+        <header class="main-header">
+            <h1>Calculadora de Jubilación</h1>
+        </header>
+
+        <div class="calculator-body">
+            <form id="retirement-form" class="calculator-form">
+                <div class="input-column">
+                    <div class="form-section section-personal">
+                        <h2>DATOS PERSONALES</h2>
+                        <div class="input-group">
+                            <label for="retirement-current-age">Edad actual</label>
+                            <div class="input-with-slider">
+                                <input type="number" id="retirement-current-age" value="40" min="18" max="99">
+                                <input type="range" id="retirement-current-age-range" value="40" min="18" max="99">
+                                <span class="range-value">40 Años</span>
+                            </div>
+                        </div>
+                        <div class="input-group">
+                            <label for="retirement-desired-age">Edad de retiro deseada</label>
+                            <div class="input-with-slider">
+                                <input type="number" id="retirement-desired-age" value="67" min="18" max="100">
+                                <input type="range" id="retirement-desired-age-range" value="67" min="18" max="100">
+                                <span class="range-value">67 Años</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-section section-pre-retirement">
+                        <h2>ANTES DE JUBILARTE</h2>
+                        <div class="input-group">
+                            <label for="retirement-initial-contribution">Aportación inicial (€)</label>
+                            <div class="input-with-slider">
+                                <input type="number" id="retirement-initial-contribution" value="1000" min="0" step="100">
+                                <input type="range" id="retirement-initial-contribution-range" value="1000" min="0" max="100000" step="100">
+                                <span class="range-value">1.000 €</span>
+                            </div>
+                        </div>
+                        <div class="input-group">
+                            <label for="retirement-annual-contribution">Aportación anual (€)</label>
+                            <div class="input-with-slider">
+                                <input type="number" id="retirement-annual-contribution" value="2000" min="0" step="100">
+                                <input type="range" id="retirement-annual-contribution-range" value="2000" min="0" max="20000" step="100">
+                                <span class="range-value">2.000 €</span>
+                            </div>
+                        </div>
+                        <div class="input-group">
+                            <label for="retirement-pre-interest-rate">Interés anual (%)</label>
+                            <div class="input-with-slider">
+                                <input type="number" id="retirement-pre-interest-rate" value="2" min="0" max="15" step="0.01">
+                                <input type="range" id="retirement-pre-interest-rate-range" value="2" min="0" max="15" step="0.01">
+                                <span class="range-value">2.00 %</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-section section-post-retirement">
+                        <h2>DESPUÉS DE JUBILARTE</h2>
+                        <div class="input-group">
+                            <label for="retirement-years-of-enjoyment">Años para disfrutar</label>
+                            <div class="input-with-slider">
+                                <input type="number" id="retirement-years-of-enjoyment" value="20" min="1" max="60">
+                                <input type="range" id="retirement-years-of-enjoyment-range" value="20" min="1" max="60">
+                                <span class="range-value">20 Años</span>
+                            </div>
+                        </div>
+                        <div class="input-group">
+                            <label for="retirement-post-interest-rate">Interés anual (%)</label>
+                            <div class="input-with-slider">
+                                <input type="number" id="retirement-post-interest-rate" value="2" min="0" max="15" step="0.01">
+                                <input type="range" id="retirement-post-interest-rate-range" value="2" min="0" max="15" step="0.01">
+                                <span class="range-value">2.00 %</span>
+                            </div>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn-calculate">CALCULA TU RESUMEN</button>
+                </div>
+            </form>
+
+            <div class="results-column">
+                <div class="results-section section-total-savings">
+                    <h3>AHORROS TOTALES AL JUBILARTE</h3>
+                    <span id="retirement-total-savings" class="result-value">0.00&nbsp;€</span>
+                </div>
+                <div class="results-section section-monthly-income">
+                    <h3>INGRESO MENSUAL ESTIMADO</h3>
+                    <span id="retirement-monthly-income" class="result-value">0.00&nbsp;€</span>
+                </div>
+                <div class="results-section section-capital-depletion">
+                    <h3>TU CAPITAL SE AGOTARÍA EN ESTE Nº DE AÑOS:</h3>
+                    <span id="retirement-capital-depletion" class="result-value">0&nbsp;Años</span>
+                </div>
+            </div>
+        </div>
+
+        <footer class="calculator-footer">
+            <img src="images/ocaso.png" alt="Ocaso decorativo">
+        </footer>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
