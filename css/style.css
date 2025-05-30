@@ -21,7 +21,7 @@ body {
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1); 
     width: 100%;
     max-width: 960px; 
-    overflow: hidden; /* Se cambiará a visible o auto si el scroll es aceptado */
+    overflow: hidden;
     display: flex;
     flex-direction: column;
     position: relative; 
@@ -46,7 +46,7 @@ body {
 .calculator-body {
     display: flex;
     flex-wrap: wrap; 
-    padding: 0 16px 16px 16px; /* Padding inferior se mantiene para espaciar del footer */
+    padding: 0 16px 16px 16px; 
     gap: 16px; 
     flex-grow: 1;
     position: relative; 
@@ -218,7 +218,7 @@ input[type="range"]::-moz-range-thumb {
 .calculator-footer {
     width: 100%;
     line-height: 0; 
-    max-height: 260px; /* Aumento MUY significativo para escritorio */
+    max-height: 260px; 
     background-color: rgba(0,0,0,0.05); 
     display: flex; 
     align-items: center; 
@@ -231,10 +231,10 @@ input[type="range"]::-moz-range-thumb {
     display: block; 
     width: 100%;
     height: auto; 
-    object-fit: contain; /* Asegura que la imagen se vea entera */
+    object-fit: contain;
     border-bottom-left-radius: 10px; 
     border-bottom-right-radius: 10px; 
-    max-height: 100%; /* La imagen usará hasta el 100% de la altura del footer */
+    max-height: 100%; 
 }
 
 /* Responsive Adjustments */
@@ -246,7 +246,7 @@ input[type="range"]::-moz-range-thumb {
         margin: 0;
         border-radius: 0; 
         max-width: 100%;
-        /* min-height: 100vh; Ya no podemos garantizar esto si el contenido es muy alto */
+        
     }
     .main-header {
         padding: 10px 15px;
@@ -336,7 +336,7 @@ input[type="range"]::-moz-range-thumb {
         margin-top: 10px;
     }
     .calculator-footer {
-        max-height: 180px; /* Aumento considerable para tabletas */
+        max-height: 180px; 
     }
 }
 
@@ -359,6 +359,6 @@ input[type="range"]::-moz-range-thumb {
         font-size: 0.9em; 
     }
      .calculator-footer {
-        max-height: 130px; /* Aumento considerable para móviles */
+        max-height: 130px; 
     }
 }
